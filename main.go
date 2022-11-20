@@ -79,7 +79,7 @@ func main() {
 		ctx.Redirect(http.StatusPermanentRedirect, data.LinkReal)
 	})
 	router.GET("", func(ctx *gin.Context) {
-		ctx.String(200, "Hello", "Hai")
+		ctx.String(200, "Hello, Test CD Berjalan")
 	})
 	router.Run(":10001")
 
