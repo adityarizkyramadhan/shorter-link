@@ -1,10 +1,10 @@
-name: Deploy SIMLK Backend
+name: Deploy Short Link Backend
 on:
   push:
     branches: [master]
 jobs:
   web-deploy:
-    name: 🎉 Deploy ShortLink Backend
+    name: 🎉 Deploy Short Link Backend
     runs-on: ubuntu-latest
 
     steps:
@@ -30,4 +30,4 @@ jobs:
             pm2 delete sl
             cd /home/aditya/shorter-link
             go build .
-            pm2 start ./BE_WEB_BEM_Proker --name sl
+            pm2 start ./shorter-link --name sl
