@@ -27,7 +27,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            sudo pm2 delete sl
+            pm2 delete sl
             cd /home/aditya/shorter-link
             go build .
-            sudo pm2 start ./BE_WEB_BEM_Proker --name sl
+            pm2 start ./BE_WEB_BEM_Proker --name sl
