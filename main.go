@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
@@ -38,6 +39,8 @@ func main() {
 	domain := "sl.adityaariizkyy.my.id"
 
 	router := gin.Default()
+
+	router.Use(cors.Default())
 
 	router.POST("", func(ctx *gin.Context) {
 		c := ctx.Request.Context()
